@@ -2,7 +2,6 @@ import pytest
 
 from src.Product import Product
 from src.Category import Category
-from src.main import product1, product2, product3
 
 
 @pytest.fixture()
