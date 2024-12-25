@@ -1,4 +1,5 @@
 from src.category import Category
+from src.product import Product
 
 
 def test_category_init(category_smartphone):
@@ -12,3 +13,17 @@ def test_category_init(category_smartphone):
 def count_test():
     assert Category.category_count == 1
     assert Category.product_count == 1
+
+
+def test_add_product(add_product):
+    category_test = Category(
+        name="Смартфоны",
+        description=("Смартфоны, как средство не только "
+                     "коммуникации, но и получения дополнительных "
+                     "функций для удобства жизни"),
+        products=[]
+    )
+    product_test = add_product
+
+    category_test.add_product(product_test)
+    assert category_test.product_count == 3
