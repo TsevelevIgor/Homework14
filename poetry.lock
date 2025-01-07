@@ -358,6 +358,17 @@ test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=8.3.2)", "pytest-
 type = ["mypy (>=1.11.2)"]
 
 [[package]]
+name = "product"
+version = "0.1.1.1"
+description = ""
+optional = false
+python-versions = "*"
+files = [
+    {file = "product-0.1.1.1-py2-none-any.whl", hash = "sha256:7922ab1b27ec4d5b80fe769b04810ca7855cbf9f3e02646c8b0575379d2a26a9"},
+    {file = "product-0.1.1.1.tar.gz", hash = "sha256:a78873fc640e4de4d47346a05e19f6d4318b66a47b65307cd753d4e514e2ce13"},
+]
+
+[[package]]
 name = "pycodestyle"
 version = "2.12.1"
 description = "Python style guide checker"
@@ -440,4 +451,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "93a5c1e327e3b799c993919fceaee121a96bf065cc187f27f63bb6b533ca1055"
+content-hash = "992a52a5179673d4e7bd315c8679be1f2cc733abf088aa602191c328a8a87b43"
