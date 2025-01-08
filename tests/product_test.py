@@ -7,3 +7,11 @@ def test_product_init(product_samsung):
 
 def test_new_product(add_product):
     assert add_product
+
+
+def test_str(str_info):
+    assert str_info
+
+
+def test_add(add_info):
+    assert add_info

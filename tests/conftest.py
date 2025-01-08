@@ -26,3 +26,13 @@ def add_product():
         price=37000.0,
         quantity=3
     )
+
+
+@pytest.fixture()
+def str_info():
+    return f"\"Samsung Galaxy S23 Ultra\", 180000.0 руб. Остаток: 5 шт."
+
+
+@pytest.fixture()
+def add_info():
+    return 2580000.0
