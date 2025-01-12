@@ -26,3 +26,7 @@ def test_add_product(add_product):
 
     category_test.add_product(product_test)
     assert category_test.product_count == 3
+
+
+def test_str(category_smartphone):
+    assert str(category_smartphone) == 'Смартфоны, количество продуктов: 27 шт.'

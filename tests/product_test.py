@@ -9,9 +9,9 @@ def test_new_product(add_product):
     assert add_product
 
 
-def test_str(str_info):
-    assert str_info
+def test_str(product_samsung):
+    assert str(product_samsung) == 'Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5 шт.'
 
 
-def test_add(add_info):
-    assert add_info
+def test_add(add_all):
+    assert add_all == 180000.0

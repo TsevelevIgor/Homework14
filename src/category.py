@@ -28,4 +28,7 @@ class Category:
         return product_str
 
     def __str__(self):
-        return f'{self.name}, количество продуктов: {self.product_count} шт.'
+        sum_product = 0
+        for product in self.__products:
+            sum_product += product.quantity
+        return f'{self.name}, количество продуктов: {sum_product} шт.'
