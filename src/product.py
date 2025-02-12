@@ -28,3 +28,9 @@ class Product:
     def price(self, price):
         if price <= 0:
             raise ValueError('Цена не должна быть нулевая или отрицательная')
+
+    def __str__(self):
+        return f'{self.name}, {self.price} руб. Остаток: {self.quantity} шт.'
+
+    def __add__(self, other):
+        return (self.price * self.quantity) + (other.price * other.quantity)

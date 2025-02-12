@@ -26,3 +26,8 @@ def add_product():
         price=37000.0,
         quantity=3
     )
+
+
+@pytest.fixture()
+def add_all():
+    return 180000.0
