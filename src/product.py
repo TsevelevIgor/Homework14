@@ -34,3 +34,30 @@ class Product:
 
     def __add__(self, other):
         return (self.price * self.quantity) + (other.price * other.quantity)
+
+
+class Smartphone(Product):
+    """Подкласс Смартфоны"""
+
+    def __init__(self, name, description, price, quantity, efficiency, model, memory, color):
+        super().__init__(name, description, price, quantity)
+        self.efficiency = efficiency
+        self.model = model
+        self.memory = memory
+        self.color = color
+
+    def __add__(self, other):
+        if type(other) is self.__class__:
+            return self.price * self.quantity + other.price * other.quantity
+        else:
+            raise TypeError
+
+
+class LawnGrass(Product):
+    """Подкласс Трава газонная"""
+
+    def __init__(self, name, description, price, quantity, country, germination_period, color):
+        super().__init__(name, description, price, quantity)
+        self.country = country
+        self.germination_period = germination_period
+        self.color = color

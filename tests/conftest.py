@@ -1,7 +1,7 @@
 import pytest
 
 from src.category import Category
-from src.product import Product
+from src.product import Product, Smartphone, LawnGrass
 
 
 @pytest.fixture()
@@ -31,3 +31,19 @@ def add_product():
 @pytest.fixture()
 def add_all():
     return 180000.0
+
+
+@pytest.fixture()
+def product_smartphone():
+    return Smartphone("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5, 95.5,
+                      "S23 Ultra", 256, "Серый")
+
+
+@pytest.fixture()
+def add_smartphone():
+    return 180000.0
+
+
+@pytest.fixture()
+def product_LawnGrass():
+    return LawnGrass("Газонная трава", "Элитная трава для газона", 500.0, 20, "Россия", "7 дней", "Зеленый")
