@@ -1,4 +1,18 @@
-class Product:
+from abc import ABC, abstractmethod
+
+
+class BaseProduct(ABC):
+    @abstractmethod
+    def __init__(self):
+        pass
+
+
+class MixinProduct:
+    def __repr__(self):
+        return f"{self.__class__.__name__}"
+
+
+class Product(BaseProduct):
     """Класс товаров"""
     name: str
     description: str
