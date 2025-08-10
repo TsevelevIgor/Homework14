@@ -12,7 +12,7 @@ class MixinProduct:
         return f"{self.__class__.__name__}"
 
 
-class Product(BaseProduct):
+class Product(BaseProduct, MixinProduct):
     """Класс товаров"""
     name: str
     description: str
