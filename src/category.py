@@ -21,9 +21,9 @@ class Category:
         """Метод добавления нового товара"""
         if isinstance(new_product, Product):
             self.__products.append(new_product)
+            Category.product_count += 1
         else:
             raise TypeError
-        Category.product_count += 1
 
     @property
     def products(self):
