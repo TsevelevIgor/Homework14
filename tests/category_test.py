@@ -30,3 +30,13 @@ def test_add_product(add_product):
 
 def test_str(category_smartphone):
     assert str(category_smartphone) == 'Смартфоны, количество продуктов: 27 шт.'
+
+
+def test_middle_price():
+    category_empty = Category("Смартфоны", "Категория смартфонов", [])
+    category1 = Category("Смартфоны", "Категория смартфонов",
+                         ["Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5,
+                          "Iphone 15", "512GB, Gray space", 210000.0, 8,
+                          "Xiaomi Redmi Note 11", "1024GB, Синий", 31000.0, 14])
+    assert category_empty.middle_price() == 0
+    assert category1.middle_price() == 140333.33

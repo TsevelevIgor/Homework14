@@ -11,6 +11,8 @@ class Product:
         self.__price = price
         self.description = description
         self.quantity = quantity
+        if self.quantity == 0:
+            raise ValueError('Товар с нулевым количеством не может быть добавлен')
 
     @classmethod
     def new_product(cls, products_dict):
