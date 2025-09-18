@@ -30,3 +30,8 @@ def test_add_product(add_product):
 
 def test_str(category_smartphone):
     assert str(category_smartphone) == 'Смартфоны, количество продуктов: 27 шт.'
+
+
+def test_middle_price():
+    category_empty = Category("Смартфоны", "Категория смартфонов", [])
+    assert category_empty.middle_price() == 0
